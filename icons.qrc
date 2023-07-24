@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/autoscale.png</file>
+        <file>icons/data.png</file>
+        <file>icons/gear.png</file>
+        <file>icons/graph.png</file>
+        <file>icons/measure.png</file>
+        <file>icons/pause.png</file>
+        <file>icons/play.png</file>
+        <file>icons/popout.png</file>
+        <file>icons/screenshot.png</file>
+        <file>icons/reset.png</file>
+    </qresource>
+</RCC>
