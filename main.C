@@ -1,4 +1,4 @@
-#include "amjChartView.H"
+#include "amjChart.H"
 
 #include <QApplication>
 

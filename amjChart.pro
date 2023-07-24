@@ -18,18 +18,14 @@ SOURCES += \
     main.C
 
 HEADERS += \
-    amjChartView.H
+    amjChart.H
 
 FORMS += \
     amjChartView.ui
 
 # Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
 
-unix:!macx: LIBS += -L/opt/QCustomPlot/lib/ -lqcustomplot
-
+LIBS += -L/opt/QCustomPlot/lib/ -lqcustomplot
 INCLUDEPATH += /opt/QCustomPlot/include
 DEPENDPATH += /opt/QCustomPlot/include
 
@@ -38,3 +34,6 @@ headers.path=/opt/amjChart/include
 headers.files=amjChart.H
 
 INSTALLS += target headers
+
+RESOURCES += \
+    icons.qrc
