@@ -25,9 +25,11 @@ FORMS += \
 
 # Default rules for deployment.
 
-LIBS += -L/opt/QCustomPlot/lib/ -lqcustomplot
+LIBS += -L/opt/QCustomPlot/lib/ -L../QCustomPlot/qcustomplot-sharedlib/sharedlib-compilation/ -lqcustomplot
 INCLUDEPATH += /opt/QCustomPlot/include
+INCLUDEPATH += ../QCustomPlot
 DEPENDPATH += /opt/QCustomPlot/include
+DEPENDPATH += ../QCustomPlot
 
 target.path=/opt/amjChart/lib
 headers.path=/opt/amjChart/include
