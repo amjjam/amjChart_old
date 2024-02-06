@@ -33,7 +33,7 @@ public:
   void range(double,double t2=0); // range of time to plot, in seconds before current time
   void append(QDateTime t, QVector<double> d); // Append a data point
   void legendList(std::vector<int>); // Place legend at bottom for graphs in list
-  void legendShow(bool); // If true show the legend
+  void legendShow(bool s=true); // If true show the legend
   void legendWrap(int); // Max number of legend items in a row. Default is 5.
   void wheelFactor(double w){_wheelFactor=w;}; // fractional change in time interval with each wheel click (0.05 default). Make it negative to scroll opposite.
   void toolbarShow(bool);
