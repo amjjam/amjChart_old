@@ -1,3 +1,7 @@
+
+!defined(prefix,var):prefix=/opt/amjChart
+!defined(prefix_QCustomPlot):prefix_QCustomPlot=/opt/QCustomPlot
+  
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -25,14 +29,15 @@ FORMS += \
 
 # Default rules for deployment.
 
-LIBS += -L/opt/QCustomPlot/lib/ -L../QCustomPlot/qcustomplot-sharedlib/sharedlib-compilation/ -lqcustomplot
-INCLUDEPATH += /opt/QCustomPlot/include
-INCLUDEPATH += ../QCustomPlot
-DEPENDPATH += /opt/QCustomPlot/include
-DEPENDPATH += ../QCustomPlot
+LIBS += -L$(prefix_QCustomPlot)/lib/ -lqcustomplot
+#LIBS += -L$(prefix_QCustomPlot)/lib/ -L../QCustomPlot/qcustomplot-sharedlib/sharedlib-compilation/ -lqcustomplot
+INCLUDEPATH += $(prefix_QCustomPlot)/include
+#INCLUDEPATH += ../QCustomPlot
+DEPENDPATH += $(prefix_QCustomPlot)/include
+#DEPENDPATH += ../QCustomPlot
 
-target.path=/opt/amjChart/lib
-headers.path=/opt/amjChart/include
+target.path=$(prefix)/lib
+headers.path=$(prefix)/include
 headers.files=amjChart.H
 
 INSTALLS += target headers
