@@ -1,5 +1,5 @@
 
-!defined(prefix,var):prefix=/opt/amjChart
+!defined(prefix,var):prefix=/opt/amj
 !defined(prefix_QCustomPlot):prefix_QCustomPlot=/opt/QCustomPlot
   
 QT       += core gui
@@ -29,15 +29,15 @@ FORMS += \
 
 # Default rules for deployment.
 
-LIBS += -L$(prefix_QCustomPlot)/lib/ -lqcustomplot
+LIBS += -L$${prefix_QCustomPlot}/lib/ -lqcustomplot
 #LIBS += -L$(prefix_QCustomPlot)/lib/ -L../QCustomPlot/qcustomplot-sharedlib/sharedlib-compilation/ -lqcustomplot
-INCLUDEPATH += $(prefix_QCustomPlot)/include
+INCLUDEPATH += $${prefix_QCustomPlot}/include
 #INCLUDEPATH += ../QCustomPlot
-DEPENDPATH += $(prefix_QCustomPlot)/include
+DEPENDPATH += $${prefix_QCustomPlot}/include
 #DEPENDPATH += ../QCustomPlot
 
-target.path=$(prefix)/lib
-headers.path=$(prefix)/include
+target.path=$${prefix}/lib
+headers.path=$${prefix}/include
 headers.files=amjChart.H
 
 INSTALLS += target headers
